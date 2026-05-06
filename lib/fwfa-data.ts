@@ -9,6 +9,10 @@ export type Program = {
   title: string;
   description: string;
   icon: IconName;
+  badge?: string;
+  subtitle?: string;
+  highlights?: string[];
+  featured?: boolean;
 };
 
 export type ValueItem = {
@@ -76,6 +80,23 @@ export const aboutHighlights = [
 ];
 
 export const programs: Program[] = [
+  {
+    title: "Florida Wave Prep Soccer",
+    badge: "New Feature Program",
+    subtitle: "Elite Supplemental Training + Competition Pathway",
+    description:
+      "A selective development track for middle and high school players who want meaningful supplemental training, added competition, and clearer college exposure beyond their primary team environment.",
+    highlights: [
+      "For select middle & high school players",
+      "Supplemental training beyond primary team",
+      "Weekend sessions + off-season competition",
+      "Competes in top-level club leagues",
+      "Minimum 3 college showcases annually",
+      "Exposure to college recruitment pathways"
+    ],
+    featured: true,
+    icon: "route"
+  },
   {
     title: "After-School Soccer • Academic Program",
     description:

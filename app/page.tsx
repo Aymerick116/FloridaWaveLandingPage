@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BrandLogo } from "@/components/brand-logo";
 import { Footer } from "@/components/footer";
+import { FeaturedProgramCard } from "@/components/featured-program-card";
 import { Icon } from "@/components/icons";
 import { Navbar } from "@/components/navbar";
 import { PathwaySection } from "@/components/pathway-section";
@@ -18,6 +19,9 @@ import {
 } from "@/lib/fwfa-data";
 
 export default function Home() {
+  const featuredProgram = programs.find((program) => program.featured);
+  const standardPrograms = programs.filter((program) => !program.featured);
+
   return (
     <>
       <Navbar />
@@ -287,8 +291,14 @@ export default function Home() {
             />
           </SectionReveal>
 
+          {featuredProgram ? (
+            <SectionReveal delay={80} className="mt-14">
+              <FeaturedProgramCard {...featuredProgram} />
+            </SectionReveal>
+          ) : null}
+
           <div className="mt-14 grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
-            {programs.map((program, index) => (
+            {standardPrograms.map((program, index) => (
               <SectionReveal key={program.title} delay={index * 90}>
                 <ProgramCard {...program} />
               </SectionReveal>
