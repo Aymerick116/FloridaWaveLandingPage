@@ -55,7 +55,7 @@ export function Navbar() {
               </span>
             </Link>
 
-            <nav className="hidden items-center gap-7 md:flex">
+            <nav className="hidden items-center gap-5 xl:flex">
               {navLinks.map((link) => (
                 <Link
                   key={link.label}
@@ -67,7 +67,7 @@ export function Navbar() {
               ))}
             </nav>
 
-            <div className="hidden items-center gap-3 md:flex">
+            <div className="hidden items-center gap-3 xl:flex">
               <Link href="#contact" className="button-primary">
                 Join the Academy
               </Link>
@@ -75,7 +75,7 @@ export function Navbar() {
 
             <button
               type="button"
-              className="flex h-12 w-12 items-center justify-center rounded-full border border-white/[0.15] bg-white/[0.05] text-white transition hover:bg-white/10 md:hidden"
+              className="flex h-12 w-12 items-center justify-center rounded-full border border-white/[0.15] bg-white/[0.05] text-white transition hover:bg-white/10 xl:hidden"
               aria-label="Toggle navigation"
               onClick={() => setMenuOpen((current) => !current)}
             >
@@ -100,7 +100,7 @@ export function Navbar() {
           </div>
 
           {menuOpen ? (
-            <div className="border-t border-white/10 px-5 pb-5 pt-3 md:hidden">
+            <div className="border-t border-white/10 px-5 pb-5 pt-3 xl:hidden">
               <nav className="flex flex-col gap-3">
                 {navLinks.map((link) => (
                   <Link

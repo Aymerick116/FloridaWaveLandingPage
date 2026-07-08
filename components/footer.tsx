@@ -57,13 +57,13 @@ export function Footer() {
             ))}
           </div>
           <a
-            href="mailto:hello@fwfa.org"
+            href="mailto:FloridaWavesINC@gmail.com"
             className="mt-6 inline-flex items-center gap-3 text-sm text-white/[0.72] transition hover:text-white"
           >
             <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/[0.12] bg-white/[0.06] text-gold-300">
               <Icon name="mail" className="h-4 w-4" />
             </span>
-            hello@fwfa.org
+            FloridaWavesINC@gmail.com
           </a>
         </div>
       </div>

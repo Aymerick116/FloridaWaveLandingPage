@@ -15,6 +15,20 @@ export type Program = {
   featured?: boolean;
 };
 
+export type Camp = {
+  title: string;
+  description: string;
+  icon: IconName;
+  tag: string;
+};
+
+export type EventItem = {
+  title: string;
+  description: string;
+  icon: IconName;
+  month: string;
+};
+
 export type ValueItem = {
   title: string;
   description: string;
@@ -30,8 +44,10 @@ export const navLinks: NavLink[] = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Programs", href: "#programs" },
+  { label: "Camps", href: "#camps" },
   { label: "Pathway", href: "#pathway" },
   { label: "Values", href: "#values" },
+  { label: "Events", href: "#events" },
   { label: "Vision", href: "#vision" },
   { label: "Contact", href: "#contact" }
 ];
@@ -126,6 +142,54 @@ export const programs: Program[] = [
     description:
       "Expands access to soccer and youth development throughout the local community.",
     icon: "community"
+  }
+];
+
+export const camps: Camp[] = [
+  {
+    title: "Summer Camp",
+    description:
+      "A high-energy seasonal camp focused on technical repetition, small-sided play, and confident decision-making.",
+    icon: "bolt",
+    tag: "Seasonal Development"
+  },
+  {
+    title: "Winter Camp",
+    description:
+      "An off-season training environment that keeps players sharp, active, and progressing through the winter months.",
+    icon: "shield",
+    tag: "Off-Season Training"
+  },
+  {
+    title: "Spring Camp",
+    description:
+      "A performance-focused camp built to help players reset, refine technique, and prepare for the next stretch of competition.",
+    icon: "growth",
+    tag: "Pre-Season Build"
+  },
+  {
+    title: "College ID Camp",
+    description:
+      "An advanced exposure camp designed to combine high-level training with evaluation and college pathway insight.",
+    icon: "target",
+    tag: "Next-Level Exposure"
+  }
+];
+
+export const events: EventItem[] = [
+  {
+    title: "Heritage Cup",
+    description:
+      "A May showcase event centered on competition, club pride, and community connection across South Florida.",
+    icon: "trophy",
+    month: "May"
+  },
+  {
+    title: "5 v 5 Unity Cup",
+    description:
+      "A July small-sided event built around fast play, teamwork, and a strong sense of community spirit.",
+    icon: "community",
+    month: "July"
   }
 ];
 

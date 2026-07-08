@@ -13,5 +13,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# TypeScript incremental cache
+*.tsbuildinfo
+
 # system files
 .DS_Store
