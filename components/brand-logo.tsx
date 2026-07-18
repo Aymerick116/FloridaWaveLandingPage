@@ -13,15 +13,15 @@ export function BrandLogo({
 }: BrandLogoProps) {
   return (
     <span
-      className={`relative inline-block aspect-[242/312] shrink-0 overflow-hidden [clip-path:polygon(11%_7%,50%_1.5%,89%_7%,96%_69%,50%_99%,4%_69%)] ${className}`}
+      className={`relative inline-block aspect-[2/3] shrink-0 overflow-hidden [clip-path:polygon(9%_4%,50%_0.8%,91%_4%,98%_68%,50%_100%,2%_68%)] ${className}`}
     >
       <Image
-        src="/fwfa-club-logo.png"
+        src="/fwfa-club-logo.jpg"
         alt="Florida Wave Football Academy club crest"
         fill
         sizes="(max-width: 768px) 120px, 220px"
         priority={priority}
-        className={`object-cover object-center scale-[1.12] translate-y-[1.5%] ${imageClassName}`}
+        className={`object-cover object-center ${imageClassName}`}
       />
     </span>
   );

@@ -18,6 +18,7 @@ import {
   events,
   heroHighlights,
   programs,
+  supportPartnerPillars,
   trustBadges
 } from "@/lib/fwfa-data";
 
@@ -281,6 +282,64 @@ export default function Home() {
                 </SectionReveal>
               ))}
             </div>
+          </div>
+        </SectionShell>
+
+        <SectionShell className="bg-white/50">
+          <div className="grid gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+            <SectionReveal>
+              <div className="panel relative overflow-hidden p-6 sm:p-8">
+                <div className="absolute inset-0 pattern-grid-light opacity-60" />
+                <div className="absolute right-4 top-4 h-24 w-24 rounded-full bg-sun-400/[0.14] blur-2xl" />
+                <div className="relative overflow-hidden rounded-[2rem] border border-navy-900/[0.08] bg-white shadow-soft">
+                  <Image
+                    src="/high5-consultants-partner.png"
+                    alt="High 5 Consultants, LLC partnership logo."
+                    width={1296}
+                    height={1304}
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+              </div>
+            </SectionReveal>
+
+            <SectionReveal delay={120}>
+              <SectionHeading
+                eyebrow="Support Partnership"
+                title="A working partnership that strengthens off-field support for players and families."
+                description="FWFA works with High 5 Consultants, LLC to extend holistic support beyond soccer. This partnership helps reinforce mental health support, mentorship, and academic support so player development stays connected to family wellness and long-term growth."
+              />
+
+              <div className="mt-8 rounded-[1.8rem] border border-gold-400/20 bg-gradient-to-br from-gold-300/10 via-white to-aqua-50 p-6">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-sun-500">
+                  Partnership Focus
+                </p>
+                <p className="mt-4 text-lg leading-8 text-navy-900/80">
+                  High 5 Consultants, LLC supports a broader development model
+                  centered on wellness, guidance, and educational reinforcement
+                  so athletes can feel supported both in sport and in life.
+                </p>
+              </div>
+
+              <div className="mt-8 grid gap-4 sm:grid-cols-3">
+                {supportPartnerPillars.map((pillar, index) => (
+                  <div
+                    key={pillar.title}
+                    className={`rounded-[1.6rem] border border-navy-900/[0.08] bg-white/[0.88] p-5 shadow-soft ${
+                      index === 1 ? "sm:-translate-y-4" : ""
+                    }`}
+                  >
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-gold-300/20 to-white text-sun-500 shadow-sm">
+                      <Icon name={pillar.icon} className="h-5 w-5" />
+                    </div>
+                    <h3 className="mt-5 text-xl text-navy-950">{pillar.title}</h3>
+                    <p className="mt-3 text-sm leading-7 text-navy-800/[0.74]">
+                      {pillar.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </SectionReveal>
           </div>
         </SectionShell>
 

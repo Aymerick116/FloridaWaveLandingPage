@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { BrandLogo } from "@/components/brand-logo";
 import { Icon } from "@/components/icons";
@@ -25,6 +26,31 @@ export function Footer() {
             Serving Pompano Beach, Deerfield Beach, and surrounding areas with
             youth development rooted in soccer, education, and community.
           </p>
+
+          <div className="mt-8 max-w-sm rounded-[1.6rem] border border-white/[0.12] bg-white/[0.06] p-4 backdrop-blur">
+            <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-gold-300">
+              Support Partner
+            </p>
+            <div className="mt-4 flex items-center gap-4">
+              <div className="overflow-hidden rounded-[1.2rem] border border-white/10 bg-white p-2 shadow-soft">
+                <Image
+                  src="/high5-consultants-partner.png"
+                  alt="High 5 Consultants, LLC logo."
+                  width={72}
+                  height={72}
+                  className="h-16 w-16 object-contain"
+                />
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-white">
+                  High 5 Consultants, LLC
+                </p>
+                <p className="mt-1 text-sm leading-6 text-white/[0.68]">
+                  Mental health support, mentorship, and academic support.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div>

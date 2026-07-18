@@ -29,6 +29,12 @@ export type EventItem = {
   month: string;
 };
 
+export type SupportPartnerPillar = {
+  title: string;
+  description: string;
+  icon: IconName;
+};
+
 export type ValueItem = {
   title: string;
   description: string;
@@ -190,6 +196,27 @@ export const events: EventItem[] = [
       "A July small-sided event built around fast play, teamwork, and a strong sense of community spirit.",
     icon: "community",
     month: "July"
+  }
+];
+
+export const supportPartnerPillars: SupportPartnerPillar[] = [
+  {
+    title: "Mental Health Support",
+    description:
+      "Support that helps players and families build resilience, confidence, and healthy habits beyond the field.",
+    icon: "shield"
+  },
+  {
+    title: "Mentorship",
+    description:
+      "Guidance and encouragement that reinforce leadership, accountability, and positive decision-making.",
+    icon: "spark"
+  },
+  {
+    title: "Academic Support",
+    description:
+      "Resources that strengthen student success and keep education connected to the full player pathway.",
+    icon: "school"
   }
 ];
 
