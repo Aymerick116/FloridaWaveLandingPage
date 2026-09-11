@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Icon, type IconName } from "@/components/icons";
 
 type FeaturedProgramCardProps = {
@@ -7,6 +8,8 @@ type FeaturedProgramCardProps = {
   badge?: string;
   subtitle?: string;
   highlights?: string[];
+  image?: string;
+  imageAlt?: string;
 };
 
 export function FeaturedProgramCard({
@@ -15,7 +18,9 @@ export function FeaturedProgramCard({
   icon,
   badge,
   subtitle,
-  highlights = []
+  highlights = [],
+  image,
+  imageAlt
 }: FeaturedProgramCardProps) {
   return (
     <article className="group relative overflow-hidden rounded-[2.4rem] border border-gold-400/35 bg-white/[0.92] p-8 shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-glow sm:p-10">
@@ -54,15 +59,29 @@ export function FeaturedProgramCard({
           </p>
         </div>
 
-        <div className="grid gap-3 sm:grid-cols-2">
-          {highlights.map((highlight) => (
-            <div
-              key={highlight}
-              className="rounded-[1.2rem] border border-navy-900/[0.08] bg-white/80 px-4 py-4 text-sm leading-6 text-navy-900/80"
-            >
-              {highlight}
+        <div className="grid gap-5">
+          {image ? (
+            <div className="overflow-hidden rounded-[1.8rem] border border-navy-900/[0.08] bg-navy-950 shadow-soft">
+              <Image
+                src={image}
+                alt={imageAlt ?? `${title} program flyer.`}
+                width={1024}
+                height={1536}
+                className="h-auto w-full"
+              />
             </div>
-          ))}
+          ) : null}
+
+          <div className="grid gap-3 sm:grid-cols-2">
+            {highlights.map((highlight) => (
+              <div
+                key={highlight}
+                className="rounded-[1.2rem] border border-navy-900/[0.08] bg-white/80 px-4 py-4 text-sm leading-6 text-navy-900/80"
+              >
+                {highlight}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </article>

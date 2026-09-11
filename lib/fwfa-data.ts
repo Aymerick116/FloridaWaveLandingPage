@@ -13,6 +13,8 @@ export type Program = {
   subtitle?: string;
   highlights?: string[];
   featured?: boolean;
+  image?: string;
+  imageAlt?: string;
 };
 
 export type Camp = {
@@ -103,20 +105,31 @@ export const aboutHighlights = [
 
 export const programs: Program[] = [
   {
+    title: "Florida Wave Girls Performance Academy",
+    badge: "Signature Program",
+    subtitle: "Elite training for girls who want more",
+    description:
+      "The official girls player development division of Florida Wave Futbol Academy, providing professional individual and small-group training for girls who are serious about improving their game and reaching their full potential.",
+    highlights: [
+      "Individual one-on-one training",
+      "Semi-private training for 1-3 players",
+      "Small group sessions with 6-8 players",
+      "Individual development plans",
+      "Led by an experienced female performance coach",
+      "Ball mastery, first touch, finishing, speed, agility, and confidence"
+    ],
+    featured: true,
+    image: "/girls-academy-signature-program.png",
+    imageAlt:
+      "Florida Wave Girls Performance Academy flyer with training formats, development focus, and contact information.",
+    icon: "spark"
+  },
+  {
     title: "Florida Wave Prep Soccer",
-    badge: "New Feature Program",
+    badge: "Supplemental Pathway",
     subtitle: "Elite Supplemental Training + Competition Pathway",
     description:
       "A selective development track for middle and high school players who want meaningful supplemental training, added competition, and clearer college exposure beyond their primary team environment.",
-    highlights: [
-      "For select middle & high school players",
-      "Supplemental training beyond primary team",
-      "Weekend sessions + off-season competition",
-      "Competes in top-level club leagues",
-      "Minimum 3 college showcases annually",
-      "Exposure to college recruitment pathways"
-    ],
-    featured: true,
     icon: "route"
   },
   {
@@ -138,15 +151,12 @@ export const programs: Program[] = [
     icon: "trophy"
   },
   {
-    title: "Advanced Performance Training",
-    description:
-      "Focused technical and physical development for serious players ready to elevate their game.",
-    icon: "bolt"
-  },
-  {
     title: "Soccer for Success (Community Program)",
     description:
-      "Expands access to soccer and youth development throughout the local community.",
+      "Expands access to soccer and youth development through the Friday Community Shield League, connecting neighborhood parks, families, food, music, and inclusive play for ages 6 to 12.",
+    image: "/soccer-for-success-community-program.png",
+    imageAlt:
+      "Florida Wave Friday Community Shield League flyer for the Soccer for Success community program.",
     icon: "community"
   }
 ];

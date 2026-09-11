@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Icon, type IconName } from "@/components/icons";
 
 type ProgramCardProps = {
@@ -6,6 +7,8 @@ type ProgramCardProps = {
   icon: IconName;
   badge?: string;
   subtitle?: string;
+  image?: string;
+  imageAlt?: string;
 };
 
 export function ProgramCard({
@@ -13,7 +16,9 @@ export function ProgramCard({
   description,
   icon,
   badge,
-  subtitle
+  subtitle,
+  image,
+  imageAlt
 }: ProgramCardProps) {
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-navy-900/[0.08] bg-white/[0.88] p-7 shadow-soft transition duration-300 hover:-translate-y-2 hover:border-sun-300/70 hover:shadow-glow">
@@ -42,6 +47,17 @@ export function ProgramCard({
       <p className="relative mt-4 text-base leading-7 text-navy-800/[0.76]">
         {description}
       </p>
+      {image ? (
+        <div className="relative mt-6 overflow-hidden rounded-[1.5rem] border border-navy-900/[0.08] bg-navy-950 shadow-soft">
+          <Image
+            src={image}
+            alt={imageAlt ?? `${title} program flyer.`}
+            width={1024}
+            height={1536}
+            className="h-auto w-full"
+          />
+        </div>
+      ) : null}
     </article>
   );
 }
